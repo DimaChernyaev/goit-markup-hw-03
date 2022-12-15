@@ -6,6 +6,8 @@
   --button-color: #404bbf;
   --ligt-color: #f4f4fd;
   --cloud-btn: #E7E9FC;
+  --social-link: #31d0aa;
+  --customers-logo: #8E8F99;
 }
 
 body {
@@ -152,8 +154,16 @@ img {
   background-color: var(--main-color);
   text-align: center;
   padding-top: 192px;
-  padding-bottom: 192px;
-}
+  padding-bottom: 192px;    
+
+  max-width: 1440px;
+  height: 600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+  url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;}
+
 
 .hero-title {
   color: var(--third-color);
@@ -185,6 +195,7 @@ img {
 .btn-hero:focus {
   color: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .btn-hero:active {
   background-color: var(--button-color);
@@ -197,11 +208,32 @@ img {
 }
 
 .work-list {
-  display: flex;
+  display: flex;  
+}
+
+.list-item {
+  width: 264px;
 }
 
 .list-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 24px;
+}
+
+.work-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+  
+  background-color: var(--cloud-btn);
+  border-radius: 4px;
+}
+
+.item-icon {
+  width: 64px;
+  height: 64px;
 }
 
 .work-title {  
@@ -279,9 +311,83 @@ img {
 }
 
 .team-profession {
+  margin-bottom: 8px;
+
   font-size: 16px;
   line-height: 1.5;
 }
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--small-color);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Customers */
+
+.customers-title {
+  margin-bottom: 72px;
+
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.customers-list {
+  display: flex;
+}
+
+.customers-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.customers-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--customers-logo);
+  border-radius: 4px;
+}
+
+.customers-item:hover,
+.customers-item:focus {
+  border-color: var(--small-color);
+}
+
+.customers-icon {
+  fill: var(--customers-logo);
+  width: 104px;
+  height: 56px;
+}
+
+.customers-icon:hover{
+  fill: var(--small-color);
+}
+
 
 /* Foother */
 .foot-logo {
@@ -292,7 +398,7 @@ img {
   line-height: 1.16;
 }
 
-.foother-page {  
+.foother-page {
   padding-top: 100px;
   padding-bottom: 100px;
 
@@ -305,6 +411,51 @@ img {
   color: var(--ligt-color);
   font-size: 16px;
   line-height: 1.5;
+}
+
+.social-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  
+  color: var(--third-color);
+}
+
+.foother-flex {
+  display: flex;
+}
+
+.foother-item:not(:last-child) {
+  margin-right: 120px;
+}
+
+.social-fot-list {
+  display: flex;
+}
+
+.social-fot-item {
+  display: inline-flex;
+  padding: 8px 8px;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-fot-item:hover,
+.social-fot-item:focus {
+  background-color: var(--social-link);
+}
+
+.social-fot-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.social-fot-icon {
+  width: 24px;
+  height: 24px;
 }
 
 
@@ -328,7 +479,7 @@ img {
   min-width: 69px;
 
   background-color: var(--ligt-color);
-  border: 1px solid var(--cloud-btn);
+  border: transparent;
   border-radius: 4px;
   align-items: center;
   cursor: pointer;
@@ -353,7 +504,9 @@ img {
 .project-item {
   width: 360px;
   margin-right: 24px;
-  margin-bottom: 48px;  
+  margin-bottom: 48px; 
+  
+  border: 0.5px solid var(--ligt-color);
 }
 
 .project-item:nth-child(3n) {
@@ -364,6 +517,12 @@ img {
   margin-bottom: 0;
 }
 
+.project-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+  0px 1px 1px rgba(46, 47, 66, 0.16), 
+  0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .item-description {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -372,7 +531,7 @@ img {
   background: var(--third-color);
   border-bottom: 0.5px solid var(--ligt-color);
   border-left: 0.5px solid var(--ligt-color);
-  border-right: 0.5px solid var(--ligt-color);;
+  border-right: 0.5px solid var(--ligt-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
