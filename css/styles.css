@@ -106,6 +106,7 @@ img {
   margin-right: 40px;
 }
 
+
 .nav-link {
   display: block;
   padding-top: 24px;
@@ -146,6 +147,7 @@ img {
 .contact:focus {
   color: var(--small-color);
 }
+
 
 /* Main */
 
@@ -362,7 +364,7 @@ img {
   margin-right: 24px;
 }
 
-.customers-item {
+.customers-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -373,9 +375,9 @@ img {
   border-radius: 4px;
 }
 
-.customers-item:hover,
-.customers-item:focus {
-  border-color: var(--small-color);
+.customers-icon:hover,
+.customers-icon:focus {
+  fill: var(--small-color);
 }
 
 .customers-icon {
@@ -384,8 +386,10 @@ img {
   height: 56px;
 }
 
-.customers-icon:hover{
+.customers-link:hover,
+.customers-link:focus {
   fill: var(--small-color);
+  border: 1px solid var(--small-color);;
 }
 
 
@@ -434,7 +438,7 @@ img {
   display: flex;
 }
 
-.social-fot-item {
+.social-fot-link {
   display: inline-flex;
   padding: 8px 8px;
   width: 40px;
@@ -444,8 +448,8 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social-fot-item:hover,
-.social-fot-item:focus {
+.social-fot-link:hover,
+.social-fot-link:focus {
   background-color: var(--social-link);
 }
 
@@ -517,7 +521,8 @@ img {
   margin-bottom: 0;
 }
 
-.project-item:hover {
+.project-item:hover,
+.project-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
   0px 1px 1px rgba(46, 47, 66, 0.16), 
   0px 2px 1px rgba(46, 47, 66, 0.08);
